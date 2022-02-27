@@ -32,11 +32,11 @@ const questions = [
     },
     {
         type: "input",
-        name: "test",
+        name: "tests",
         message: "Provide instructions for testing the project."
     },
     {
-        type: "checkbox",
+        type: "list",
         name: "license",
         message: "Choose a license.",
         choices: ["MIT", "Apache", "GPL", "None"]

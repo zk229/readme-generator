@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if(license !== "None") {
-    return `https://img.shields.io/badge/License-${license}-blue`;
+    return `![${license} License Badge](https://img.shields.io/badge/License-${license}-blue)`;
   }
   return "";
 }
@@ -11,7 +11,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if(license !== "None") {
-
+    return "LICENSE.txt"
   }
   return "";
 }
@@ -23,8 +23,6 @@ function renderLicenseSection(license) {
     return "";
   }
   return `## License
-
-  ![${license} License Badge](${renderLicenseBadge(license)})
 
   This software provided under the [${license} license](${renderLicenseLink(license)}).
   `
@@ -41,6 +39,8 @@ function licenseTableOfContents(license) {
 function generateMarkdown(data) {
   return `# ${data.title}
 
+  ${renderLicenseBadge(data.license)}
+
   ## Description
 
   ${data.description}
@@ -49,7 +49,7 @@ function generateMarkdown(data) {
 
   - [Installation](#installation)
   - [Usage](#usage)
-  - [How to Contribute](#How to Contribute)
+  - [How to Contribute](#how-to-contribute)
   - [Tests](#tests)
   ${licenseTableOfContents(data.license)}
   - [Questions](#questions)
