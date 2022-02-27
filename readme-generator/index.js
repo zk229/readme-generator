@@ -54,7 +54,9 @@ const questions = [
 ];
 
 // Write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    
+}
 
 // Initialize app
 function init() {}
